@@ -52,6 +52,18 @@
     }
   }
 }
+</script>
+<style>
+
+    </style>
+    <script>
+      
+        
+    
+      function popup(){
+  const popup = document.getElementById('popup');
+  popup.classList.remove('hidden');
+}
     </script>
     <!-- <link rel="stylesheet" href="input.css"> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,20 +103,24 @@
       background-color: #000000;
       border-radius: 20px; /* Darker color for active dot */
     }
+    html{
+      scroll-behavior: smooth;
+    }
+
     </style>
 </head>
 
 <body>
 
-    <header class="bg-white py-4 px-6"> <!-- Container for the entire header - white background, padding -->
+  <header class="bg-white  md:py-4 px-6"> <!-- Container for the entire header - white background, padding -->
         <div class="container mx-auto flex justify-between items-center"> <!-- Container to center content, flexbox for layout, center alignment -->
       
           <!-- Logo Area -->
-          <div class="flex items-center"> <!-- Flex to align logo and text horizontally -->
+          <div class="flex items-center relative"> <!-- Flex to align logo and text horizontally -->
             <img src="assets - Copy/newlogo.png" alt="Avanzo Academy Logo" class="h-30 w-50"> <!-- Logo image - adjust h-10 and w-12 as needed --> 
             <!-- Navigation -->
             <nav>
-              <button class="flex items-center max-md:hidden text-gray-700 hover:text-gray-900 focus:outline-none"> <!-- Button for "Programs" - gray text, darker on hover, remove focus outline -->
+              <button class="flex items-center max-md:hidden text-gray-700 hover:text-gray-900 font-[Poppins] text-2xl focus:outline-none"> <!-- Button for "Programs" - gray text, darker on hover, remove focus outline -->
                 <span>Programs</span>
                 <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <!-- (Dropdown Arrow SVG - You'd need to include the actual SVG path here) -->
@@ -113,17 +129,102 @@
               </button>
             </nav>
           </div>
+                  <nav class="hidden md:flex text-2xl font-[Poppins] items-center gap-11">
+            <a href="index.html" class="text-gray-800 hover:text-[#9f6496]">Home</a>
+            <a href="courses.html" class="text-gray-800 hover:text-[#9f6496]">Courses</a>
+            <a href="Announcement.html" class="text-gray-800 hover:text-[#9f6496]">Announcement</a>
+           <a href="https://lms.avanzoacademy.in" class="text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
+            <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
+            <a ><button  onclick="scrolltocontact()" class="cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact </button></a>
+            <button class="text-xl bg-[#d191af] hover:bg-pink-300 w-fit px-2  rounded-full py-2  focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 ">Get Free Demo </button>
+              <button class="bg-[#d191af] hidden md:relative text-gray-700 font-medium rounded-full max-sm:px-1 max-sm:py-0 max-sm:m-2 max-sm:text-sm px-4 py-2 hover:bg-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"> <!-- Pink background, gray text, medium font, rounded button, padding, hover effect, focus styles -->
+              Get Free Demo
+            </button>
+          </nav>
+       <script>
+       function scrolltocontact(){
+  const contactsection = document.getElementById('contactoptions');
+  contactsection.scrollIntoView({behaviour:'smooth'});
+
+    // close mobileMenu
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileMenu.classList.add('-translate-x-full');
+  document.body.style.overflow = 'auto'; // Enable scrolling
+
+}
+       </script>
+    
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobileMenu"
+    class="fixed top-0 left-0 w-64  h-full border bg-white  text-black transform -translate-x-full transition-transform duration-300 z-50">
+    <div class=" relative p-6 flex flex-col gap-6">
+      <!-- Close Button -->
+         <button id="closeBtn" class="absolute top-4 right-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+      <!-- Mobile Nav Links -->
+       
+      <a href="index.html" class="hover:text-[#9f6496]">Home</a>
+      <a href="courses.html" class="hover:text-[#9f6496]">Courses</a>
+      <a href="Announcement.html" class="hover:text-[#9f6496]">Announcement</a>
       
-          
       
-          <!-- Button -->
-          <div>
-            <button class="bg-[#d191af] text-gray-700 font-medium rounded-full max-sm:px-1 max-sm:py-0 max-sm:m-2 max-sm:text-sm px-4 py-2 hover:bg-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"> <!-- Pink background, gray text, medium font, rounded button, padding, hover effect, focus styles -->
+      
+      <a href="https://lms.avanzoacademy.in"  class="hover:text-[#9f6496]">Virtual Center</a>
+
+      <a href="industry.html" class="hover:text-[#9f6496]">Industry</a>
+       <a ><button  onclick="scrolltocontact()" class="cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact </button></a>     
+           <button class="z-20 bg-[#d191af]  md:block px-8 py-2 bg-primary text-white rounded-full border border-white opacity-70 curser-pointer hover:transition-colors hover:bg-[#d191af] hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"
+            onclick="window.location.href='https://lms.avanzoacademy.in';">
+            Sign in
+        </button>
+        <div>
+            <button class="bg-[#d191af] hidden md:relative text-gray-700 font-medium rounded-full max-sm:px-1 max-sm:py-0 max-sm:m-2 max-sm:text-sm px-4 py-2 hover:bg-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"> <!-- Pink background, gray text, medium font, rounded button, padding, hover effect, focus styles -->
               Get Free Demo
             </button>
           </div>
+    </div>
+    </div>
+      
+      
+      <!-- Hamburger Icon for Mobile -->
+    <button id="menuToggle" class="scale-125 md:hidden px-6 text-gray-800 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
       
         </div>
+        <script>
+          
+       const closeBtn = document.getElementById('closeBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+          const menuBtn = document.getElementById('menuBtn');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('-translate-x-full');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-x-full');
+    });
+ menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+         closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        </script>
       </header>
       
       <!-- Announcement Bar -->
@@ -132,7 +233,7 @@
       </div>
 
       <!-- Hero Section -->
-      <section class="bg-[#843B94] min-h-screen relative z-[-1] flex items-center justify-center p-10">
+      <section class="bg-[#843B94] min-h-screen relative flex items-center justify-center p-10">
           <div class="container mx-auto max-w-5xl w-full grid max-md:block md:grid-cols-2 gap-10 items-center">
 
               <!-- Text Section -->
@@ -154,25 +255,202 @@
                   </div>
 
                   <!-- Buttons -->
-                  <div class="flex gap-8">
-                      <button class="bg-[#6265AC] px-8 w-[250px] py-2 rounded-full text-white font-semibold hover:bg-blue-600">
+                  <div class="flex gap-4">
+                      <button onclick="popup()" class="bg-[#6265AC] text-xl cursor-pointer px-8 w-fit  py-2 rounded-full text-white font-semibold hover:bg-blue-600">
                           Enroll Now
                       </button>
-                      <button class="border border-white w-[250px] px-8 py-2 rounded-full text-sm text-white font-semibold hover:bg-white hover:text-purple-700">
+                      <button class="border border-white w-fit px-8 py-2 rounded-full text-sm text-white font-semibold hover:bg-white hover:text-purple-700">
                           View Course Syllabus
                       </button>
                   </div>
               </div>
 
-              <!-- Image Section -->
-              <div class="relative">
+               <!-- Image Section -->
+              <div class="relative z-2">
                   <div class="p-6 absolute top-[-350px] ml-[-149px]">
                       <img src="assets - Copy/fbbaa.png" alt="Smiling woman using a laptop for online course" class="max-md:hidden relative z-[-1] max-w-[100%]">
                   </div>
               </div>
+                    <!-- pop up code for desktops or larger screens  -->
+             <div id="popup" class="fixed  md:inset-y-15 md:absolute lg:absolute md:inset-x-160 lg:inset-x-0 inset-0  items-center md:bg-none bg-opacity-30 z-50 hidden items-center justify-center p-4">
+  <div class="bg-white rounded-lg w-full max-w-sm mx-auto p-6 relative">
+    <!-- Close Button -->
+    <button id="closeBtn" onclick="closePopup()" class="absolute  cursor-pointer  scale-120 top-4 right-4 text-gray-500 hover:text-red-500 transition duration-300">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Heading -->
+    <h1 class="text-black px-6 text-center text-lg  font-bold mb-4">Register to start your journey Now!</h1>
+
+    <!-- Name Input -->
+    <input type="text" id="name" placeholder="Full Name" class="border border-gray-300 rounded-md px-4 py-2 w-full mb-4">
+
+    <!-- Country Code and Phone Input -->
+    <div class="flex gap-2 mb-4">
+      <select id="popupmessage" class="border border-gray-300 rounded-md py-2 px-2 w-1/3">
+         <option value="+91">+91</option>
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                            <option value="+81">+81</option>
+                            <option value="+61">+61</option>
+                            <option value="+86">+86</option>
+                            <option value="+49">+49</option>
+                            <option value="+33">+33</option>
+                            <option value="+39">+39</option>
+                            <option value="+7">+7</option>
+                            <option value="+82">+82</option>
+                            <option value="+34">+34</option>
+                            <option value="+55">+55</option>
+                            <option value="+62">+62</option>
+                            <option value="+971">+971</option>
+                            <option value="+880">+880</option>
+                            <option value="+92">+92</option>
+                            <option value="+20">+20</option>
+                            <option value="+98">+98</option>
+                            <option value="+90">+90</option>
+                            <option value="+966">+966</option>
+                            <option value="+63">+63</option>
+                            <option value="+60">+60</option>
+                            <option value="+27">+27</option>
+                            <option value="+351">+351</option>
+                            <option value="+31">+31</option>
+                            <option value="+46">+46</option>
+                            <option value="+47">+47</option>
+                            <option value="+48">+48</option>
+                            <option value="+41">+41</option>
+                            <option value="+234">+234</option>
+                            <option value="+964">+964</option>
+                            <option value="+973">+973</option>
+                            <option value="+965">+965</option>
+                            <option value="+974">+974</option>
+                            <option value="+975">+975</option>
+                            <option value="+961">+961</option>
+                            <option value="+66">+66</option>
+                            <option value="+353">+353</option>
+                            <option value="+43">+43</option>
+                            <option value="+45">+45</option>
+                            <option value="+420">+420</option>
+                            <option value="+48">+48</option>
+                            <option value="+998">+998</option>
+                            <option value="+94">+94</option>
+                            <option value="+380">+380</option>
+                            <option value="+502">+502</option>
+                            <option value="+256">+256</option>
+                            <option value="+260">+260</option>
+                            <option value="+977">+977</option>
+
+
+      </select>
+      <input type="text" id="phone" placeholder="Enter your number" class="border border-gray-300 rounded-md px-4 py-2 w-2/3">
+    </div>
+
+    <!-- Language Dropdown -->
+    <select name="choose Language" class="border border-gray-300 rounded-md py-2 px-4 w-full mb-4">
+     <option value="">Choose Language</option>
+                            <option value="English">English</option>
+                            <option value="Mandarin Chinese">Mandarin Chinese</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="French">French</option>
+                            <option value="Russian">Russian</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="German">German</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Korean">Korean</option>
+                            <option value="Turkish">Turkish</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Dutch">Dutch</option>
+                            <option value="Thai">Thai</option>
+                            <option value="Vietnamese">Vietnamese</option>
+                            <option value="Malay">Malay</option>
+                            <option value="Persian">Persian</option>
+                            <option value="Swahili">Swahili</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Bengali">Bengali</option>
+                            <option value="Telugu">Telugu</option>
+                            <option value="Marathi">Marathi</option>
+                            <option value="Tamil">Tamil</option>
+                            <option value="Urdu">Urdu</option>
+                            <option value="Gujarati">Gujarati</option>
+                            <option value="Kannada">Kannada</option>
+                            <option value="Odia">Odia</option>
+                            <option value="Punjabi">Punjabi</option>
+                            <option value="Malayalam">Malayalam</option>
+                            <option value="Assamese">Assamese</option>
+                            <option value="Maithili">Maithili</option>
+                            <option value="Nepali">Nepali</option>
+                            <option value="Kashmiri">Kashmiri</option>
+                            <option value="Santali">Santali</option>
+                            <option value="Konkani">Konkani</option>
+                            <option value="Dogri">Dogri</option>
+                            <option value="Manipuri">Manipuri</option>
+                            <option value="Sindhi">Sindhi</option>
+                            <option value="Bodo">Bodo</option>
+                          
+    </select>
+
+    <!-- Email -->
+    <input type="email" id="email" placeholder="Enter Email" class="border border-gray-300 rounded-md px-4 py-2 w-full mb-4">
+
+    <!-- Highlights -->
+    <div class="text-sm text-gray-800 space-y-3 mb-4">
+      <div class="flex items-start gap-2">
+        <svg class="h-5 w-5 text-green-500 mt-1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414L9 13.414l4.707-4.707z" clip-rule="evenodd"/>
+        </svg>
+        <p>We'll reach out to you between 10 AM and 9 PM</p>
+      </div>
+      <div class="flex items-start gap-2">
+        <svg class="h-5 w-5 text-green-500 mt-1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414L9 13.414l4.707-4.707z" clip-rule="evenodd"/>
+        </svg>
+        <p>Unbiased career guidance</p>
+      </div>
+      <div class="flex items-start gap-2">
+        <svg class="h-5 w-5 text-green-500 mt-1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414L9 13.414l4.707-4.707z" clip-rule="evenodd"/>
+        </svg>
+        <p>Personalized guidance based on your skills</p>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button id="enrollbtn2" onclick="validateForm()" class="bg-violet-600 cursor-pointer hover:bg-violet-700 text-white w-full py-2 rounded-full text-center text-base font-semibold">
+      Enroll Now
+    </button>
+  </div>
+</div>
+
+           <!-- //end of popup code -->
+
+
+            </div>
+          </div>
+
 
           </div>
       </section>
+<style>
+  .poppins{
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:600
+ 
+}
+  
+.roboto{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:600
+ 
+}
+btn{
+  box-shadow: 4px 4px 4px 0 rgb(82, 80, 222);
+}
+
+</style>
 
       <!-- Overview Section -->
       <section class="py-12 bg-white">
@@ -218,7 +496,7 @@
               </div>
 
               <div class="text-center mt-8">
-                  <a href="#" class="bg-[#6265AC] hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full inline-block focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                  <a href="#" class="bg-[#6265AC] cursor-pointer hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full inline-block focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
                       Learn More
                   </a>
               </div>
@@ -248,7 +526,7 @@
 
           <!-- Button -->
           <div class="mt-6 text-center">
-              <a href="#" class="bg-[#6265AC] text-white py-2 px-6 rounded-full text-sm shadow-md hover:bg-indigo-600 transition">
+              <a href="#" class="bg-[#6265AC] cursor-pointer text-white py-2 px-6 rounded-full text-sm shadow-md hover:bg-indigo-600 transition">
                   Download Complete Syllabus
               </a>
           </div>
@@ -307,7 +585,7 @@
                       </div>
 
                       <div>
-                          <button type="submit" class="w-full bg-[#6265AC] text-white py-2 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                          <button type="submit" class="w-full cursor-pointer bg-[#6265AC] text-white py-2 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                               Register Now
                           </button>
                       </div>
@@ -345,7 +623,7 @@
               </div>
 
               <div class="text-center mt-16">
-                  <button class="bg-[#6265AC] hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                  <button class="bg-[#6265AC] cursor-pointer hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
                       Book your Career Counselling
                   </button>
               </div>
@@ -371,7 +649,7 @@
               </div>
 
               <div class="text-center">
-                  <button class="bg-[#6265AC] hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                  <button class="bg-[#6265AC] cursor-pointer hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
                       Explore Curriculum
                   </button>
               </div>
@@ -428,7 +706,7 @@
             </div>
 
             <div class="text-center mt-16">
-                <button class="bg-[#6265AC] :bg-indigo-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                <button class="bg-[#6265AC] cursor-pointer hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
                     Explore More
                 </button>
             </div>
@@ -467,7 +745,7 @@
               </div>
 
               <div class="text-center mt-16">
-                  <button class="bg-[#6265AC] hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                  <button class="bg-[#6265AC] cursor-pointer hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
                       Access Demo Class
                   </button>
               </div>
@@ -591,11 +869,37 @@
                         
                         <div class="mt-6 md:mt-8 flex flex-col md:flex-row gap-4">
                           <button class="bg-[#d191af] px-6 py-3 text-white/80 rounded hover:bg-[#c27a9a] transition-colors">Join now</button>
-                          <button class="bg-[#d191af] px-6 py-3 text-white/80 rounded hover:bg-[#c27a9a] transition-colors">Share now</button>
+                          <button id="shareBtn" class="bg-[#d191af] px-6 py-3 text-white/80 rounded hover:bg-[#c27a9a] transition-colors">Share now</button>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <script>
+                     // Share Button Functionality 
+      document.addEventListener('DOMContentLoaded', function  share1() {
+        const shareBtn = document.getElementById('shareBtn');
+        const shareData = {
+            title: 'My Portfolio',
+            text: 'Check out this awesome website!',
+            url: 'https://avanzo-academy.vercel.app/course1.html'
+        };
+
+        shareBtn.addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                    console.log(shareData);
+                    
+                    console.log('Shared successfully!');
+                } catch (err) {
+                    console.error('Share failed:', err);
+                }
+            } else {
+                alert('Sharing is not supported on this browser.');
+            }
+        });
+      });
+                  </script>
                   
                   <!-- Pagination Dots -->
                   <div class="flex justify-center items-center w-full mt-8 mb-6">
@@ -654,7 +958,7 @@
                           
                           <div class="mt-6 md:mt-8 flex flex-col md:flex-row gap-4">
                             <button class="bg-[#d191af] px-6 py-3 text-white/80 rounded hover:bg-[#c27a9a] transition-colors">Join now</button>
-                            <button class="bg-[#d191af] px-6 py-3 text-white/80 rounded hover:bg-[#c27a9a] transition-colors">Share now</button>
+                            <button id="shareBtn2" class="bg-[#d191af] px-6 py-3 text-white/80 rounded hover:bg-[#c27a9a] transition-colors">Share now</button>
                           </div>
                         </div>
                       </div>
@@ -670,6 +974,31 @@
                     </div>
                   </div>
                 </div>
+                <script>
+                     document.addEventListener('DOMContentLoaded', function  share1() {
+        const shareBtn = document.getElementById('shareBtn2');
+        const shareData = {
+            title: 'My Portfolio',
+            text: 'Check out this awesome website!',
+            url: 'https://avanzo-academy.vercel.app/course2.html'
+        };
+
+        shareBtn.addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                    console.log(shareData);
+                    
+                    console.log('Shared successfully!');
+                } catch (err) {
+                    console.error('Share failed:', err);
+                }
+            } else {
+                alert('Sharing is not supported on this browser.');
+            }
+        });
+      });
+                </script>
               <!-- Slide 3 -->
               <div class="slideExpert flex-shrink-0 w-full h-full relative">
                 <!-- Main Content Container -->
@@ -716,7 +1045,7 @@
                         
                         <div class="mt-6 md:mt-8 flex flex-col md:flex-row gap-4">
                           <button class="bg-[#d191af] px-6 py-3 text-white/80 rounded hover:bg-[#c27a9a] transition-colors">Join now</button>
-                          <button class="bg-[#d191af] px-6 py-3 text-white/80 rounded hover:bg-[#c27a9a] transition-colors">Share now</button>
+                          <button id="shareBtn3" class="bg-[#d191af] px-6 py-3 text-white/80 rounded hover:bg-[#c27a9a] transition-colors">Share now</button>
                         </div>
                       </div>
                     </div>
@@ -732,7 +1061,31 @@
                   </div>
                 </div>
               </div>
+            <script>
+                 document.addEventListener('DOMContentLoaded', function  share1() {
+        const shareBtn = document.getElementById('shareBtn3');
+        const shareData = {
+            title: 'My Portfolio',
+            text: 'Check out this awesome website!',
+            url: 'https://avanzo-academy.vercel.app/course3.html'
+        };
 
+        shareBtn.addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                    console.log(shareData);
+                    
+                    console.log('Shared successfully!');
+                } catch (err) {
+                    console.error('Share failed:', err);
+                }
+            } else {
+                alert('Sharing is not supported on this browser.');
+            }
+        });
+      });
+            </script>
             
 
             <!-- Dots Navigation -->
@@ -777,6 +1130,52 @@
 
     autoSlideExpert(); // Start auto-slide
 });
+
+
+
+
+  function popup() {
+      document.getElementById("popup").classList.remove("hidden");
+    }
+
+    function closePopup() {
+      document.getElementById("popup").classList.add("hidden");
+    }
+
+    function validateForm() {
+      const name = document.getElementById("name").value;
+      
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+          
+        if ( (name === "" || email==="" || phone === "") ){
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      alert("Form Submitted!");
+
+   
+      console.log('name:', name);
+      console.log('phone:',phone);
+      console.log('email:',email);
+      
+      
+      
+    
+      return true;
+    }
+
+    function submitForm() {
+      // Add your form submission logic here
+
+
+
+
+      
+      alert("Form submitted!");
+      closePopup();
+    }
 
     </script>
           <!-- Course Certificates Section -->
@@ -983,8 +1382,7 @@ startAutoplay();
     <!-- Section Title -->
     <h2 class="text-3xl font-semibold text-gray-800 lg:text-left text-center">
 Find Other Up-skill Courses    </h2>
-
-    <!-- Cards -->
+ <!-- Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8 ">
       <!-- Card 1 -->
       <div class="flex flex-col relative bg-white shadow-lg  overflow-hidden hover:shadow-xl">
@@ -992,8 +1390,8 @@ Find Other Up-skill Courses    </h2>
         <div class="p-4 text-center h-40 flex flex-col justify-center align-center">
           <h3 class="text-lg font-semibold text-gray-800">SELF PLACED COURSES</h3>
         </div>
-        <!-- Plus Icon -->
-        <img src="assets - Copy/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-1/2">
+         <!-- know more button  -->
+     <a href="course1.html"><button class="absolute top-1/2 right-4 bg-[#9f6496] text-white  w-1/3 flex flex-row  cursor-pointer items-center justify-center -translate-y-1/2"" >Know More</button></a> 
       </div>
       <!-- Card 2 -->
       <div class="relative bg-white shadow-lg  overflow-hidden hover:shadow-xl">
@@ -1001,7 +1399,8 @@ Find Other Up-skill Courses    </h2>
         <div class="p-4 text-center h-40 flex flex-col justify-center align-center">
           <h3 class="text-lg font-semibold text-gray-800">SHORT TERM COURSES</h3>
         </div>
-        <img src="assets - Copy/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8  flex items-center justify-center -translate-y-1/2">
+            <!-- know more button  -->
+      <a href="course2.html"><button class="absolute top-1/2 right-4 bg-[#9f6496] text-white  w-1/3 flex flex-row  cursor-pointer items-center justify-center -translate-y-1/2"" >Know More</button></a>
       </div>
       <!-- Card 3 -->
       <div class="relative bg-white shadow-lg  overflow-hidden hover:shadow-xl">
@@ -1009,7 +1408,9 @@ Find Other Up-skill Courses    </h2>
         <div class="p-4 text-center h-40 flex flex-col justify-center align-center">
           <h3 class="text-lg font-semibold text-gray-800">CERTFICATION COURSES</h3>
         </div>
-        <img src="assets - Copy/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-1/2">
+            <!-- know more button  -->
+      <a href="course3.html"> <button class="absolute top-1/2 right-4 bg-[#9f6496] text-white  w-1/3 flex flex-row  cursor-pointer items-center justify-center -translate-y-1/2"" >Know More</button></a>
+
       </div>
       <!-- Card 4 -->
       <div class="relative bg-white shadow-lg  overflow-hidden hover:shadow-xl z-30">
@@ -1017,15 +1418,17 @@ Find Other Up-skill Courses    </h2>
         <div class="p-4 text-center h-40 flex flex-col justify-center align-center ">
           <h3 class="text-lg font-semibold text-gray-800">DIPLOMA COURSES</h3>
         </div>
-        <img src="assets - Copy/Icon 2.png" class="absolute top-1/2 right-4 bg-[#9f6496] text-white rounded-full w-8 h-8 flex items-center justify-center -translate-y-1/2">
+            <!-- know more button  -->
+       <a href="course4.html"><button class="absolute top-1/2 right-4 bg-[#9f6496] text-white  w-1/3 flex flex-row  cursor-pointer items-center justify-center -translate-y-1/2"" >Know More</button></a>
       </div>
     </div>
 
+
     <!-- View All Button -->
     <div class="text-center mt-8">
-      <button class="bg-[#6365aa] text-white font-semibold px-6 py-3 rounded-full  hover:bg-purple-600">
+      <a href="courses.html"><button class="bg-[#6365aa] cursor-pointer text-white font-semibold px-6 py-3 rounded-full  hover:bg-purple-600">
         view all courses
-      </button>
+      </button></a>
     </div>
   </div>
 </section>
@@ -1071,7 +1474,7 @@ Find Other Up-skill Courses    </h2>
         </div>
     </section>
     
-    <footer class="bg-[#9f6496] text-white py-8 z-19">
+    <footer id="contactoptions" class="bg-[#9f6496] text-white py-8 z-19">
       <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 px-4">
         <!-- Quick Links -->
         <div>

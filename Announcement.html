@@ -79,7 +79,7 @@
       <img src="assets - Copy/newlogo.png" alt="Avanzo Academy Logo" class="h-30 w-50"> <!-- Logo image - adjust h-10 and w-12 as needed --> 
       <!-- Navigation -->
       <nav>
-        <button class="flex items-center max-md:hidden text-gray-700 hover:text-gray-900 focus:outline-none"> <!-- Button for "Programs" - gray text, darker on hover, remove focus outline -->
+        <button class="flex items-center max-md:hidden font-[Poppins] text-2xl text-gray-700 hover:text-gray-900 focus:outline-none"> <!-- Button for "Programs" - gray text, darker on hover, remove focus outline -->
           <span>Programs</span>
           <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- (Dropdown Arrow SVG - You'd need to include the actual SVG path here) -->
@@ -88,15 +88,22 @@
         </button>
       </nav>
     </div>
- <nav class="hidden md:flex items-center gap-8 px-6">
-      <a href="index.html" class="text-gray-800 hover:text-[#9f6496]">Home</a>
-      <a href="courses.html" class="text-gray-800 hover:text-[#9f6496]">Courses</a>
-      <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
-      <a  onclick="scrolltocontact()" class="cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact</a>
-    </nav>
+ 
+                  <nav class="hidden md:flex text-2xl font-[Poppins] items-center gap-11">
+            <a href="index.html" class="text-gray-800 hover:text-[#9f6496]">Home</a>
+            <a href="courses.html" class="text-gray-800 hover:text-[#9f6496]">Courses</a>
+            <a href="Announcement.html" class="text-gray-800 hover:text-[#9f6496]">Announcement</a>
+           <a href="https://lms.avanzoacademy.in" class="text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
+            <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
+            <a ><button  onclick="scrolltocontact()" class="cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact </button></a>
+            <button class="text-xl bg-[#d191af] hover:bg-pink-300 w-fit px-2  rounded-full py-2  focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 ">Get Free Demo </button>
+              <button class="bg-[#d191af] hidden md:relative text-gray-700 font-medium rounded-full max-sm:px-1 max-sm:py-0 max-sm:m-2 max-sm:text-sm px-4 py-2 hover:bg-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"> <!-- Pink background, gray text, medium font, rounded button, padding, hover effect, focus styles -->
+              Get Free Demo
+            </button>
+          </nav>
 
     <!-- Hamburger Icon for Mobile -->
-    <button id="menuToggle" class="md:hidden px-6 text-gray-800 focus:outline-none">
+    <button id="menuToggle" class="scale-125 md:hidden px-6 text-gray-800 focus:outline-none">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M4 6h16M4 12h16M4 18h16" />
@@ -109,7 +116,7 @@
     class="fixed top-0 left-0 w-64  h-full  bg-white  text-black transform -translate-x-full transition-transform duration-300 z-50">
     <div class="relative p-6 flex flex-col gap-6">
       <!-- Close Button -->
-         <button id="closeBtn" class="absolute top-4 right-4">
+         <button id="closeBtn" class="scale-120 absolute top-4 right-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
@@ -118,8 +125,11 @@
        
       <a href="index.html" class="hover:text-[#9f6496]">Home</a>
       <a href="courses.html" class="hover:text-[#9f6496]">Courses</a>
+      <a href="Announcement.html" class="hover:text-[#9f6496]">Announcement</a>
+      <a href="https://lms.avanzoacademy.in"  class="hover:text-[#9f6496]">Virtual Center</a>
+
       <a href="industry.html" class="hover:text-[#9f6496]">Industry</a>
-       <a ><button  onclick="scrolltocontact()" class="cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact </button></a>     
+       <a ><button  onclick="scrolltocontact()" class=" cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact </button></a>     
            <button class="z-20 bg-[#d191af]  md:block px-8 py-2 bg-primary text-white rounded-full border border-white opacity-70 curser-pointer hover:transition-colors hover:bg-[#d191af] hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"
             onclick="window.location.href='https://lms.avanzoacademy.in';">
             Sign in
