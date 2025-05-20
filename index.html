@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avanzo Academy</title>
@@ -96,19 +96,21 @@
     }
     </style>
 </head>
-<body class="bg-white min-h-screen flex flex-col relative" style="background-image: url('assets - Copy/BG vector.png'); background-size: cover; ">
+<body class="bg-white min-h-screen flex flex-col relative bg-cover">
+
+<!-- <body class="bg-white min-h-screen flex flex-col relative" style="background-image: url('assets - Copy/BG vector.png'); background-size: cover; "> -->
   <img class="hidden md:block absolute top-[-100px] w-[1000px] right-[-150px] z-20" src="assets - Copy/BG vector.png" alt="">
   <img class="hidden md:block absolute top-[150vh] w-[600px]  right-[-250px] z-20" src="assets - Copy/BG vector.png" alt="">
   <img class="hidden md:block absolute top-[210vh] w-[900px]  left-[-250px] z-20" src="assets - Copy/BG vector.png" alt="">
   <img class="hidden md:block absolute top-[300vh] w-[900px]  right-[-250px] z-20" src="assets - Copy/BG vector.png" alt="">
-  <img class="hidden md:block absolute top-[490vh] w-[1100px] left-[-350px] z-20" src="assets - Copy/BG vector.png" alt="">
+  <img class="hidden md:block absolute top-[530vh] w-[600px] left-[260px] z-20" src="assets - Copy/BG vector.png" alt=""> 
   <!-- <img class="hidden md:block absolute top-[540vh] w-[900px]  right-[-400px] z-20 2xl:overflow-hidden" src="assets - Copy/BG vector.png" alt="">
     Header -->
-    <header class="relative px-4 md:px-6 py-4">
+    <header class="fixed w-full top-0   bg-white z-50  px-4   py-2">
         <div class="flex items-center  justify-between w-[90vw] mx-auto ">
             <!-- Logo -->
             <div class="z-20">
-<img src="assets - Copy/newlogo.png" alt="Avanzo Academy" class="h-[100px] w-[200px] object-cover">
+                  <img src="assets - Copy/newlogo-removebg-preview.png" alt="Avanzo Academy" class="w-24 sm:w-24 md:w-28 lg:w-36 object-cover">
             </div>
 
             <!-- Mobile Menu Button -->
@@ -119,8 +121,8 @@
             </button>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden lg:mx-30px md:flex flex-1 text-xl md:text-2xl justify-center mr-[115px] z-20">
-                <div class="flex items-center gap-8">
+            <nav class="hidden lg:mx-30px md:flex flex-1 text-base lg:text-2xl  justify-center   mr-[115px] z-20">
+                <div class="flex items-center gap-3 lg:gap-16">
                     <a href="inndex.html" class="text-gray-800 hover:text-primary transition-colors">Home</a>
                     <a href="courses.html" class="text-gray-800 hover:text-primary  transition-colors">Courses</a>
                     <a href="Announcement.html" class="text-gray-800 hover:text-primary transition-colors">Announcement</a>
@@ -131,7 +133,7 @@
             </nav>
 
             <!-- Sign In Button -->
-            <button class="z-20 hidden md:block px-8 py-2 bg-primary text-white rounded-full border border-white hover:bg-opacity-90 transition-colors"
+            <button class="z-20 hidden md:block px-4 py-1 md:py-2 bg-primary md:px-6 text-white rounded-full border border-white hover:bg-opacity-90 transition-colors"
             onclick="window.location.href='https://lms.avanzoacademy.in';">
             Sign in
         </button>
@@ -153,7 +155,7 @@
                     <a href="virtual.html" class="text-gray-800 hover:text-primary transition-colors">Virtual Centre</a>
                     <a href="industry.html" class="text-gray-800 hover:text-primary transition-colors">Industry</a>
                     <a onclick="scrolltocontact()" class="text-gray-800 hover:text-primary transition-colors">Contact</a>
-                    <button class="mt-4 px-6 py-2 bg-primary text-white rounded-full hover:bg-opacity-90 transition-colors">
+                    <button  onclick="window.location.href='https://lms.avanzoacademy.in';" class="mt-4 px-6 py-2 bg-primary text-white rounded-full hover:bg-opacity-90 transition-colors">
                         Sign in
                     </button>
                 </div>
@@ -168,7 +170,7 @@
     </header>
 
      <!-- Hero Section -->
-    <main class="relative flex-1 grid md:grid-cols-2 gap-8 md:gap-12 px-4 md:px-16 py-8 md:py-12">
+    <main class="relative flex-1 grid mt-[8vh] md:mt-[6vh] md:grid-cols-2 gap-8 md:gap-12 px-4 md:px-16 py-8 md:py-12">
         <!-- <--Left Content -->
         <div class="z-20 flex flex-col justify-center text-center md:text-left">
             <h1 class="text-3xl md:text-5xl font-normal leading-normal mb-8 md:mb-12">
@@ -781,11 +783,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit.                     </p
   Know more
 </a>     
  </div>
-      <!-- Card 3 -->
-      <div class="relative bg-white shadow-lg  overflow-hidden hover:shadow-xl">
-        <img src="assets - Copy/pic 4.png" alt="Cyber Crime" class="w-full h-40 object-cover">
-        <div class="p-4 text-center h-40 flex flex-col justify-center align-center">
-          <h3 class="text-lg font-semibold text-gray-800">MICRO MASTERY</h3>
+     
+      
+       <!-- Card 3 -->
+      <div class="relative bg-white shadow-lg  overflow-hidden hover:shadow-xl z-30">
+        <img src="assets - Copy/pic 4.png" alt="Ethical Hacking" class="w-full h-40 object-cover">
+        <div class="p-4 text-center h-40 flex flex-col justify-center align-center ">
+          <h3 class="text-lg font-semibold text-gray-800">DIPLOMA COURSES</h3>
         </div>
 <a
   href="course1.html"
@@ -800,8 +804,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit.                     </p
   role="button"
 >
   Know more
-</a>
-      </div>
+</a>      
+</div>
       <!-- Card 4 -->
       <div class="relative bg-white shadow-lg  overflow-hidden hover:shadow-xl z-30">
         <img src="assets - Copy/pic 5.png" alt="Ethical Hacking" class="w-full h-40 object-cover">
@@ -843,7 +847,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit.                     </p
       <!-- Logo Carousel Wrapper -->
       <div class="relative max-w-6xl mx-auto overflow-hidden">
           <div id="logoSlider" class="flex justify-center items-center gap-10 transition-transform duration-500">
-              <img src="assets - Copy/Logo.png" alt="Elite" class="h-20">
+              <img src="assets - Copy/ee.jpg" alt="Elite" class="h-20">
               <img src="assets - Copy/Logo.png" alt="AVIT" class="h-20">
               <img src="assets - Copy/Logo.png" alt="AIMS Group" class="h-20">
               <img src="assets - Copy/Logo.png" alt="Velammal College" class="h-20">
@@ -1276,14 +1280,11 @@ wrapper.style.transform = `translateX(-${index * 33}%)`;
   
        </footer>
 
-<div class="w-full h-16 flex justify-center items-center bg-[#d191af] text-center text-sm text-gray-200 mt-0 mb-0">
+<div class="w-full h-16 flex justify-center items-center bg-[#d191af] text-center text-sm text-gray-200 mt-0 bottom-0">
   <p>
     A unit of Avanzo Cyber Solutions | Designed by
     <a href="https://avanzodesign.in" class="hover:underline text-white">avanzodesign.in</a>
   </p>
 </div>
-
-
-      
 </body>
 </html>
