@@ -108,9 +108,7 @@
       <a href="https://lms.avanzoacademy.in" class="text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
       <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
       <button onclick="scrolltocontact()" class="text-gray-800 hover:text-[#9f6496] cursor-pointer">Contact</button>
-      <button class="bg-[#d191af] hover:bg-pink-300 px-4 py-2 text-sm md:text-base lg:text-lg md:px-4 md:py-2 rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap
-        sm:px-3 sm:py-1.5 sm:text-xs
-        ">
+      <button class="bg-[#d191af] hover:bg-pink-300 px-3 cursor-pointer  py-2 md:text-sm md:px-4 md:py-2 rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
         Get Free Demo
       </button>
     </nav>
@@ -466,8 +464,8 @@ Test Name</a></h3>
                       
       
                   <!-- pop up code for desktops or larger screens  -->
-             <div id="getpopup" class="fixed inset-0 px-4 md:px-0  bg-opacity-30 z-50 hidden items-center justify-center py-4 md:py-0  indet-0   md:relative  md:w-fit md:bg-blur items-center md:bg-none bg-opacity-30 z-50 hidden items-center justify-center">
-  <div class="bg-white rounded-lg w-full max-w-sm mx-auto p-6 relative">
+             <div id="getpopup" class="fixed inset-0 px-4 md:px-0 mt-4 bg-opacity-30 z-50 hidden items-center justify-center py-4 md:py-0  indet-0   md:relative  md:w-fit md:bg-blur items-center md:bg-none bg-opacity-30 z-50 hidden items-center justify-center">
+  <div class="bg-white rounded-lg w-full mt-4 max-w-sm mx-auto p-6 relative">
     <!-- Close Button -->
     <button id="closeBtn" onclick="closepopup()" class="scale-120 cursor-pointer absolute top-4 right-4 text-gray-500 hover:text-red-500 transition duration-300">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -541,7 +539,8 @@ Test Name</a></h3>
 
     <!-- Language Dropdown -->
     <select name="choose Language" class="border border-gray-300 rounded-md py-2 px-4 w-full mb-4">
-      <option value="English">English</option>
+                            <option value="">choose Language</option>
+                            <option value="English">English</option>
                             <option value="Mandarin Chinese">Mandarin Chinese</option>
                             <option value="Spanish">Spanish</option>
                             <option value="Arabic">Arabic</option>
@@ -621,6 +620,15 @@ Test Name</a></h3>
 
   function validateForm() {
     // Add your validation and form submission logic here
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+
+    if(name === "" || phone ===""|| email===""){
+      alert('Please fill in all fields,');
+      return ;
+    }
+     
     alert('Form submitted!');
   }
 </script>
