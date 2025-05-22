@@ -74,16 +74,17 @@
     <!-- Header Section -->
    
 
-<header class="fixed top-0 w-full  md:max-w-full bg-white z-50 px-4 sm:px-6">
-  <div class="poppins container mx-auto w-full font-[poppins] flex justify-between items-center py-2">
+    <!-- Header Section -->
+   
+<header class="poppins fixed top-0 w-full   bg-white z-50 px-4 sm:px-6 font-[Poppins]">
+  <div class="container mx-auto w-full  flex justify-between items-center py-2">
     
     <!-- Left Section: Logo + Programs -->
-    <div class="flex items-center gap-2 flex-shrink-0">
+    <div class="flex  items-center gap-4 flex-shrink-0">
       <img src="assets - Copy/newlogo-removebg-preview.png" alt="Avanzo Academy Logo" class="w-24 sm:w-24 md:w-28 lg:w-36">
-
       <!-- Programs Button (Visible md and up) -->
       <nav class="hidden md:flex">
-        <button class="poppins flex items-center font-[poppins] lg:flex xl:flex xl:text-xl text-base md:hidden lg:text-base text-gray-700 hover:text-gray-900 focus:outline-none">
+        <button class="poppins flex items-center font-[Poppins] lg:text-base xl:text-xl md:flex  text-sm md:text-base   text-gray-700 hover:text-gray-900 focus:outline-none">
           <span>Programs</span>
           <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 7l3-3 3 3m-6 6l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -91,38 +92,45 @@
         </button>
       </nav>
     </div>
-  <style>
-     .poppins{
-  font-family: "poppins", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:600
- 
-}
-  
-    </style>
+
     <!-- Center & Right Section: Nav Links & CTA -->
-    <nav class="poppins hidden md:flex items-center justify-between gap-3 md:gap-4 md:hidden xl:flex  xl:text-xl lg:flex lg:text-base lg:gap-8 xl:gap-10 font-[poppins] text-base   w-full max-w-[70%]">
+    <nav class="poppins hidden md:hidden lg:flex xl:text-xl  items-center justify-evenly text-sm font-[Poppins]  w-full max-w-[70%]">
       <a href="index.html" class="text-gray-800 hover:text-[#9f6496]">Home</a>
       <a href="courses.html" class="text-gray-800 hover:text-[#9f6496]">Courses</a>
       <a href="Announcement.html" class="text-gray-800 hover:text-[#9f6496]">Announcement</a>
       <a href="https://lms.avanzoacademy.in" class="text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
       <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
       <button onclick="scrolltocontact()" class="text-gray-800 hover:text-[#9f6496] cursor-pointer">Contact</button>
-     <button class="bg-[#d191af] hover:bg-pink-300 text-sm px-2 md:py-1 w-fit rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
+      <button class="bg-[#d191af] hover:bg-pink-300 text-sm px-2 md:py-1 w-fit rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
         Get Free Demo
       </button>
     </nav>
+  
+    <style>
+      .poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+    .poppins{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+    </style>
 
     <!-- Hamburger Icon for Mobile -->
-    <button id="menuToggle" class="scale-125 md:flex lg:hidden xl:hidden text-gray-800 focus:outline-none px-2">
+    <button id="menuToggle" class=" lg:hidden scale-125 cursor-pointer text-gray-800 focus:outline-none px-2">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="fixed top-0 left-0 w-64 max-w-full  sm:w-72 h-full bg-white text-black transform -translate-x-full transition-transform duration-300 z-50">
+   <!-- Mobile Menu -->
+  <div id="mobileMenu" class="poppins fixed top-0 left-0 w-64 max-w-full  sm:w-72 h-full bg-white text-black transform -translate-x-full transition-transform duration-300 z-50">
     <div class="relative p-6 flex flex-col gap-6">
       <!-- Close Button -->
       <button id="closeBtn" class="absolute top-4 right-4 scale-110">
@@ -130,51 +138,8 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-      <!-- Mobile Nav Links -->
-      <a href="index.html" class="hover:text-[#9f6496]">Home</a>
-      <a href="courses.html" class="hover:text-[#9f6496]">Courses</a>
-      <a href="Announcement.html" class="hover:text-[#9f6496]">Announcement</a>
-      
-     
-      
-      <a href="https://lms.avanzoacademy.in" class="hover:text-[#9f6496]">Virtual Center</a>
-       <a><button onclick="scrolltocontact()" class="cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact</button></a>
-      <a href="industry.html" class="hover:text-[#9f6496]">Industry</a><button class="z-20 bg-[#d191af] px-6 py-2 text-white rounded-full  opacity-70 cursor-pointer hover:bg-[#d191af] hover:opacity-100 transition focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"
-        onclick="window.location.href='https://lms.avanzoacademy.in';">
-        Sign in
-      </button>
-    </div>
-  </div>
-</header>
-          <script>
-       function scrolltocontact(){
-  const contactsection = document.getElementById('contactoptions');
-  contactsection.scrollIntoView({behavior:'smooth'});
-
-    // close mobileMenu
-  const MobileMenu = document.getElementById('mobileMenu');
-  MobileMenu.classList.add('hidden');
-  // Hide the overlay
-  const overlay = document.getElementById('overlay');
-  overlay.classList.add('hidden');
-  // Enable scrolling
-  document.body.style.overflow = 'auto'; // Enable scrolling
-
-}
-       </script>
-      
-      <!-- Hamburger Icon for Mobile
-    <button id="menuToggle" class="scale-125 md:hidden px-6 text-gray-800 focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button> -->
-      
-        </div>
-        <script>
-          
-       const closeBtn = document.getElementById('closeBtn');
+      <script>
+            const closeBtn = document.getElementById('closeBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const overlay = document.getElementById('overlay');
           const menuBtn = document.getElementById('menuBtn');
@@ -198,24 +163,46 @@
         }
          closeBtn.addEventListener('click', closeMenu);
         overlay.addEventListener('click', closeMenu);
+        function scrolltocontact(){
+  const contactsection = document.getElementById('contactoptions');
+  contactsection.scrollIntoView({behaviour:'smooth'});
+
+    mobileMenu.classList.add('-translate-x-full');
+}
         </script>
-      </header>
+      <!-- Mobile Nav Links -->
+      <a href="index.html" class="hover:text-[#9f6496]">Home</a>
+      <a href="courses.html" class="hover:text-[#9f6496]">Courses</a>
+      <a href="Announcement.html" class="hover:text-[#9f6496]">Announcement</a>
+      <a href="https://lms.avanzoacademy.in" class="hover:text-[#9f6496]">Virtual Center</a>
+      <a href="industry.html" class="hover:text-[#9f6496]">Industry</a>
+      <a ><button onclick="scrolltocontact()" class="cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact</button></a>
+      <button class="z-20 bg-[#d191af] px-6 py-2 text-white rounded-full opacity-70 cursor-pointer hover:bg-[#d191af] hover:opacity-100 transition focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"
+        onclick="window.location.href='https://lms.avanzoacademy.in';">
+        Sign in
+      </button>
+    </div>
+  </div>
+</header>
+
+          <script>
+       function scrolltocontact(){
+  const contactsection = document.getElementById('contactoptions');
+  contactsection.scrollIntoView({behavior:'smooth'});
+
+    // close mobileMenu
+  const MobileMenu = document.getElementById('mobileMenu');
+  MobileMenu.classList.add('hidden');
+  // Hide the overlay
+  const overlay = document.getElementById('overlay');
+  overlay.classList.add('hidden');
+  // Enable scrolling
+  document.body.style.overflow = 'auto'; // Enable scrolling
+
+}
+       </script>
       
-    <!-- <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('hidden');
-
-
-        });
-
-         
- 
-    </script>
-   -->
-
+     
     <!-- Featured Courses Section -->
     <section class="bg-[#392362] py-8 mt-[9vh] md:py-16">  <!-- Adjusted padding for different screen sizes -->
         <div class="container mx-auto px-4">  <!-- Reduced horizontal padding for smaller screens -->
