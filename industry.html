@@ -144,17 +144,18 @@
 </head>
     
 <body class=" ">
+  <!-- Header Section -->
    
-<header class="fixed top-0 w-full   md:max-w-full bg-white z-50 px-4 sm:px-6">
-  <div class=" container mx-auto w-full font-[Poppins] flex justify-between items-center py-2">
+<header class="fixed top-0 w-full   bg-white z-50 px-4 sm:px-6 font-[Poppins]">
+  <div class="container mx-auto w-full  flex justify-between items-center py-2">
     
     <!-- Left Section: Logo + Programs -->
-    <div class="flex items-center gap-2 flex-shrink-0">
-      <img src="assets - Copy/newlogo-removebg-preview.png" alt="Avanzo Academy Logo" class="w-27 md:w-28 lg:w-36">
+    <div class="flex items-center gap-4 flex-shrink-0">
+      <img src="assets - Copy/newlogo-removebg-preview.png" alt="Avanzo Academy Logo" class="w-24 sm:w-24 md:w-28 lg:w-36">
 
       <!-- Programs Button (Visible md and up) -->
       <nav class="hidden md:flex">
-        <button class=" flex items-center font-[Poppins] text-sm md:text-base  lg:text-xl text-gray-700 hover:text-gray-900 focus:outline-none">
+        <button class="flex items-center font-[Poppins] lg:text-base xl:text-xl md:flex  text-sm md:text-base   text-gray-700 hover:text-gray-900 focus:outline-none">
           <span>Programs</span>
           <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 7l3-3 3 3m-6 6l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -162,38 +163,44 @@
         </button>
       </nav>
     </div>
-  <style>
-     .poppins{
-  font-family: "Poppins", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:600
- 
-}
-  
-    </style>
+
     <!-- Center & Right Section: Nav Links & CTA -->
-    <nav class=" hidden md:flex items-center justify-between gap-3 md:gap-4 lg:text-xl lg:gap-10 xl:gap-12 font-[Poppins] text-sm   w-full max-w-[70%]">
+    <nav class="hidden md:hidden lg:flex xl:text-xl  items-center  justify-between gap-3 md:gap-4 lg:text-base lg:gap-6 xl:gap-10 text-sm font-[Poppins]  w-full max-w-[70%]">
       <a href="index.html" class="text-gray-800 hover:text-[#9f6496]">Home</a>
       <a href="courses.html" class="text-gray-800 hover:text-[#9f6496]">Courses</a>
       <a href="Announcement.html" class="text-gray-800 hover:text-[#9f6496]">Announcement</a>
-      <a href="https://lms.avanzoacademy.in" class=" text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
+      <a href="https://lms.avanzoacademy.in" class="text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
       <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
       <button onclick="scrolltocontact()" class="text-gray-800 hover:text-[#9f6496] cursor-pointer">Contact</button>
-     <button class="bg-[#d191af] hover:bg-pink-300 px-3 cursor-pointer  py-2 md:text-sm md:px-4 md:py-2 rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
+      <button class="bg-[#d191af] hover:bg-pink-300 text-sm px-2 md:py-1 w-fit rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
         Get Free Demo
       </button>
     </nav>
+  
+    <style>
+      .poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+    </style>
 
     <!-- Hamburger Icon for Mobile -->
-    <button id="menuToggle" class="md:hidden text-gray-800 focus:outline-none px-2">
+    <button id="menuToggle" class=" lg:hidden scale-125 cursor-pointer text-gray-800 focus:outline-none px-2">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="fixed top-0 left-0 w-64  max-w-full  sm:w-64 h-full bg-white text-black transform -translate-x-full transition-transform duration-300 z-50">
+   <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed top-0 left-0 w-64 max-w-full  sm:w-72 h-full bg-white text-black transform -translate-x-full transition-transform duration-300 z-50">
     <div class="relative p-6 flex flex-col gap-6">
       <!-- Close Button -->
       <button id="closeBtn" class="absolute top-4 right-4 scale-110">
@@ -201,12 +208,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-      <!-- Mobile Nav Links -->
-      <a href="index.html" class="hover:text-[#9f6496]">Home</a>
-      <a href="courses.html" class="hover:text-[#9f6496]">Courses</a>
-      <a href="Announcement.html" class="hover:text-[#9f6496]">Announcement</a>
-      
-     <script>
+      <script>
             const closeBtn = document.getElementById('closeBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const overlay = document.getElementById('overlay');
@@ -238,16 +240,21 @@
     mobileMenu.classList.add('-translate-x-full');
 }
         </script>
-      
+      <!-- Mobile Nav Links -->
+      <a href="index.html" class="hover:text-[#9f6496]">Home</a>
+      <a href="courses.html" class="hover:text-[#9f6496]">Courses</a>
+      <a href="Announcement.html" class="hover:text-[#9f6496]">Announcement</a>
       <a href="https://lms.avanzoacademy.in" class="hover:text-[#9f6496]">Virtual Center</a>
-       <a><button onclick="scrolltocontact()" class="cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact</button></a>
-      <a href="industry.html" class="hover:text-[#9f6496]">Industry</a><button class="z-20 bg-[#d191af] px-6 py-2 text-white rounded-full  opacity-70 cursor-pointer hover:bg-[#d191af] hover:opacity-100 transition focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"
+      <a href="industry.html" class="hover:text-[#9f6496]">Industry</a>
+      <a ><button onclick="scrolltocontact()" class="cursor-pointer text-gray-800 hover:text-[#9f6496]">Contact</button></a>
+      <button class="z-20 bg-[#d191af] px-6 py-2 text-white rounded-full opacity-70 cursor-pointer hover:bg-[#d191af] hover:opacity-100 transition focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"
         onclick="window.location.href='https://lms.avanzoacademy.in';">
         Sign in
       </button>
     </div>
   </div>
 </header>
+
 
 
 

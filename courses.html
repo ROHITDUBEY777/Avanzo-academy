@@ -83,7 +83,7 @@
 
       <!-- Programs Button (Visible md and up) -->
       <nav class="hidden md:flex">
-        <button class="poppins flex items-center font-[poppins] text-sm md:text-base  lg:text-xl text-gray-700 hover:text-gray-900 focus:outline-none">
+        <button class="poppins flex items-center font-[poppins] lg:flex xl:flex xl:text-xl text-base md:hidden lg:text-base text-gray-700 hover:text-gray-900 focus:outline-none">
           <span>Programs</span>
           <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 7l3-3 3 3m-6 6l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -101,20 +101,20 @@
   
     </style>
     <!-- Center & Right Section: Nav Links & CTA -->
-    <nav class="poppins hidden md:flex items-center justify-between gap-3 md:gap-4 lg:text-xl lg:gap-8 xl:gap-10 font-[poppins] text-sm   w-full max-w-[70%]">
+    <nav class="poppins hidden md:flex items-center justify-between gap-3 md:gap-4 md:hidden xl:flex  xl:text-xl lg:flex lg:text-base lg:gap-8 xl:gap-10 font-[poppins] text-base   w-full max-w-[70%]">
       <a href="index.html" class="text-gray-800 hover:text-[#9f6496]">Home</a>
       <a href="courses.html" class="text-gray-800 hover:text-[#9f6496]">Courses</a>
       <a href="Announcement.html" class="text-gray-800 hover:text-[#9f6496]">Announcement</a>
       <a href="https://lms.avanzoacademy.in" class="text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
       <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
       <button onclick="scrolltocontact()" class="text-gray-800 hover:text-[#9f6496] cursor-pointer">Contact</button>
-      <button class="bg-[#d191af] hover:bg-pink-300 px-3 cursor-pointer  py-2 md:text-sm md:px-4 md:py-2 rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
+     <button class="bg-[#d191af] hover:bg-pink-300 text-sm px-2 md:py-1 w-fit rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
         Get Free Demo
       </button>
     </nav>
 
     <!-- Hamburger Icon for Mobile -->
-    <button id="menuToggle" class="scale-125 md:hidden text-gray-800 focus:outline-none px-2">
+    <button id="menuToggle" class="scale-125 md:flex lg:hidden xl:hidden text-gray-800 focus:outline-none px-2">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -217,7 +217,7 @@
    -->
 
     <!-- Featured Courses Section -->
-    <section class="bg-[#392362] py-8 mt-[8vh] md:py-16">  <!-- Adjusted padding for different screen sizes -->
+    <section class="bg-[#392362] py-8 mt-[9vh] md:py-16">  <!-- Adjusted padding for different screen sizes -->
         <div class="container mx-auto px-4">  <!-- Reduced horizontal padding for smaller screens -->
             <!-- Section Title -->
             <h2 class="text-center text-2xl md:text-3xl font-bold text-white mb-4 md:mb-8">Explore Inspiring Online Courses</h2>

@@ -71,17 +71,18 @@
 </head>
     
 <body>
+  <!-- Header Section -->
    
-<header class="fixed top-0 w-full  md:max-w-full bg-white z-50 px-4 sm:px-6 font-[Poppins]">
+<header class="fixed top-0 w-full   bg-white z-50 px-4 sm:px-6 font-[Poppins]">
   <div class="container mx-auto w-full  flex justify-between items-center py-2">
     
     <!-- Left Section: Logo + Programs -->
     <div class="flex items-center gap-4 flex-shrink-0">
-      <img src="assets - Copy/newlogo-removebg-preview.png" alt="Avanzo Academy Logo" class="w-24 sm:w-24    md:w-28 lg:w-36">
+      <img src="assets - Copy/newlogo-removebg-preview.png" alt="Avanzo Academy Logo" class="w-24 sm:w-24 md:w-28 lg:w-36">
 
       <!-- Programs Button (Visible md and up) -->
       <nav class="hidden md:flex">
-        <button class="flex items-center font-[Poppins] text-sm md:text-base  lg:text-xl text-gray-700 hover:text-gray-900 focus:outline-none">
+        <button class="flex items-center font-[Poppins] lg:text-base xl:text-xl md:flex  text-sm md:text-base   text-gray-700 hover:text-gray-900 focus:outline-none">
           <span>Programs</span>
           <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 7l3-3 3 3m-6 6l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -91,14 +92,14 @@
     </div>
 
     <!-- Center & Right Section: Nav Links & CTA -->
-    <nav class="hidden md:flex items-center justify-between gap-3 md:gap-4 lg:text-xl lg:gap-8 xl:gap-10 text-sm font-[Poppins]  w-full max-w-[70%]">
+    <nav class="hidden md:hidden lg:flex xl:text-xl  items-center  justify-between gap-3 md:gap-4 lg:text-base lg:gap-6 xl:gap-10 text-sm font-[Poppins]  w-full max-w-[70%]">
       <a href="index.html" class="text-gray-800 hover:text-[#9f6496]">Home</a>
       <a href="courses.html" class="text-gray-800 hover:text-[#9f6496]">Courses</a>
       <a href="Announcement.html" class="text-gray-800 hover:text-[#9f6496]">Announcement</a>
       <a href="https://lms.avanzoacademy.in" class="text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
       <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
       <button onclick="scrolltocontact()" class="text-gray-800 hover:text-[#9f6496] cursor-pointer">Contact</button>
-      <button class="bg-[#d191af] hover:bg-pink-300 px-4 py-2 md:text-sm md:px-4 md:py-2 rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
+      <button class="bg-[#d191af] hover:bg-pink-300 text-sm px-2 md:py-1 w-fit rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
         Get Free Demo
       </button>
     </nav>
@@ -118,7 +119,7 @@
     </style>
 
     <!-- Hamburger Icon for Mobile -->
-    <button id="menuToggle" class="md:hidden scale-125 cursor-pointer text-gray-800 focus:outline-none px-2">
+    <button id="menuToggle" class=" lg:hidden scale-125 cursor-pointer text-gray-800 focus:outline-none px-2">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -183,6 +184,7 @@
 
 
 
+
   <!-- Mobile Menu (hidden by default) -->
   <div id="mobileMenu"
     class="fixed top-0 px-6 left-0 w-64 h-full  bg-white  text-black transform -translate-x-full transition-transform duration-300 z-50">
@@ -234,28 +236,29 @@
     <!-- ...............................upcoming events.................................... -->
 
     <section>
-        <div class="flex flex-col mt-[2vh] justify-center items-center " >
+        <div class="flex flex-col mt-[2vh]  justify-center items-center " >
             <h1 class="text-center text-3xl text-black font-bold" >Upcoming Events</h1>
             <p class="max-w-[900px] text-center my-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam deleniti hic eius repudiandae soluta aperiam quasi, rerum expedita illum, laborum temporibus. Voluptatem tempora culpa dolorum sint facere, eum iure adipisci?</p>
         </div>
-        <div class="flex max-md:flex-col justify-between max-md:px-4 px-72 py-8">
+        <div class="flex max-md:flex-col md:justify-center lg:justify-center justify-center max-md:px-4 px-72 py-8">
             <div >
-                <div class="w-[450px] max-md:w-[290px] h-[250px] rounded-lg bg-black">
+                <div class="w-[340px]  h-[240px] px-4 rounded-lg bg-black">
     
                 </div>
                 <div>
-                    <h1 class="text-purple-900 py-3 text-2xl font-semibold">ET NIHIL VOLUPTATES</h1>
+                    <h1 class="text-purple-900 py-3  text-2xl  font-semibold">ET NIHIL VOLUPTATES</h1>
                     <p class="max-w-[300px] max-md:max-w-[150px] text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus veniam</p>
                     <button class="px-2 py-1 mt-4 bg-[#d190af] text-black font-bold rounded-lg text-sm" >Register Now</button>
                 </div>
             </div>
-            <div>
-                <p class="max-w-[400px] ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem rerum perferendis nemo unde fugiat consectetur molestias, voluptate nostrum eius. Nam accusantium porro animi atque minima tempora laudantium earum corrupti sint?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure exercitationem labore accusamus repellendus doloremque corrupti delectus ut fuga, eaque voluptatem rerum neque, vitae nostrum sequi illo temporibus nihil totam.</p>
-            </div>
+           
         </div>
+         <div>
+                <p class="text-center px-14 items-center my-5 md:px-16 lg:text-center lg:px-20 xl:text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem rerum perferendis nemo unde fugiat consectetur molestias, voluptate nostrum eius. Nam accusantium porro animi atque minima tempora laudantium earum corrupti sint?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure exercitationem labore accusamus repellendus doloremque corrupti delectus ut fuga, eaque voluptatem rerum neque, vitae nostrum sequi illo temporibus nihil totam.</p>
+            </div>
     </section>
     <section>
-        <div class="flex justify-between max-md:px-4 max-md:flex-col px-72 py-8">
+        <div class="flex justify-center max-md:px-4 max-md:flex-col px-72 py-8">
             <div >
                 <div class="w-[450px] max-md:w-[290px] h-[250px] rounded-lg bg-black">
     
@@ -266,10 +269,11 @@
                     <button class="px-2 py-1 mt-4 bg-[#d190af] text-black font-bold rounded-lg text-sm" >Register Now</button>
                 </div>
             </div>
-            <div>
-                <p class="max-w-[400px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem rerum perferendis nemo unde fugiat consectetur molestias, voluptate nostrum eius. Nam accusantium porro animi atque minima tempora laudantium earum corrupti sint?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure exercitationem labore accusamus repellendus doloremque corrupti delectus ut fuga, eaque voluptatem rerum neque, vitae nostrum sequi illo temporibus nihil totam.</p>
-            </div>
+            
         </div>
+        <div>
+                <p class=" text-center px-14 items-center my-5 md:px-16 lg:text-center lg:px-20 xl:text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem rerum perferendis nemo unde fugiat consectetur molestias, voluptate nostrum eius. Nam accusantium porro animi atque minima tempora laudantium earum corrupti sint?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iure exercitationem labore accusamus repellendus doloremque corrupti delectus ut fuga, eaque voluptatem rerum neque, vitae nostrum sequi illo temporibus nihil totam.</p>
+            </div>
     </section>
     <!-- ...................................footer and slider.................................................... -->
     <div>

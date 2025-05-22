@@ -73,7 +73,9 @@
    
     <!-- Header Section -->
    
-<header class="fixed top-0 w-screen md:max-w-full bg-white z-50 px-4 sm:px-6 font-[Poppins]">
+    <!-- Header Section -->
+   
+<header class="fixed top-0 w-full   bg-white z-50 px-4 sm:px-6 font-[Poppins]">
   <div class="container mx-auto w-full  flex justify-between items-center py-2">
     
     <!-- Left Section: Logo + Programs -->
@@ -82,7 +84,7 @@
 
       <!-- Programs Button (Visible md and up) -->
       <nav class="hidden md:flex">
-        <button class="flex items-center font-[Poppins] text-sm md:text-base  lg:text-xl text-gray-700 hover:text-gray-900 focus:outline-none">
+        <button class="flex items-center font-[Poppins] lg:text-base xl:text-xl md:flex  text-sm md:text-base   text-gray-700 hover:text-gray-900 focus:outline-none">
           <span>Programs</span>
           <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 7l3-3 3 3m-6 6l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -92,14 +94,14 @@
     </div>
 
     <!-- Center & Right Section: Nav Links & CTA -->
-    <nav class="hidden md:flex items-center justify-between gap-3 md:gap-4  md:text-hidden lg:text-base xl:text-xl lg:gap-8 xl:gap-10  font-[Poppins]  w-full max-w-[70%]">
+    <nav class="hidden md:hidden lg:flex xl:text-xl  items-center  justify-between gap-3 md:gap-4 lg:text-base lg:gap-6 xl:gap-10 text-sm font-[Poppins]  w-full max-w-[70%]">
       <a href="index.html" class="text-gray-800 hover:text-[#9f6496]">Home</a>
       <a href="courses.html" class="text-gray-800 hover:text-[#9f6496]">Courses</a>
       <a href="Announcement.html" class="text-gray-800 hover:text-[#9f6496]">Announcement</a>
       <a href="https://lms.avanzoacademy.in" class="text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
       <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
       <button onclick="scrolltocontact()" class="text-gray-800 hover:text-[#9f6496] cursor-pointer">Contact</button>
-      <button class="bg-[#d191af] hover:bg-pink-300 px-3 cursor-pointer  py-2 md:text-sm md:px-4 md:py-2 rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
+      <button class="bg-[#d191af] hover:bg-pink-300 text-sm px-2 md:py-1 w-fit rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 whitespace-nowrap">
         Get Free Demo
       </button>
     </nav>
@@ -117,17 +119,9 @@
   font-style: normal;
 }
     </style>
-    <script>
-        function scrolltocontact(){
-  const contactsection = document.getElementById('contactoptions');
-  contactsection.scrollIntoView({behaviour:'smooth'});
-
-    mobileMenu.classList.add('-translate-x-full');
-}
-    </script>
 
     <!-- Hamburger Icon for Mobile -->
-    <button id="menuToggle" class="md:hidden scale-125 cursor-pointer text-gray-800 focus:outline-none px-2">
+    <button id="menuToggle" class=" lg:hidden scale-125 cursor-pointer text-gray-800 focus:outline-none px-2">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -143,7 +137,15 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
+      <script>
       
+        function scrolltocontact(){
+  const contactsection = document.getElementById('contactoptions');
+  contactsection.scrollIntoView({behaviour:'smooth'});
+
+    mobileMenu.classList.add('-translate-x-full');
+}
+        </script>
       <!-- Mobile Nav Links -->
       <a href="index.html" class="hover:text-[#9f6496]">Home</a>
       <a href="courses.html" class="hover:text-[#9f6496]">Courses</a>
@@ -159,10 +161,12 @@
   </div>
 </header>
 
+
+
   
       
 
-<section class="py-8 px-6 w-screen max-w-screen z-50  mx-auto">
+<section class="py-8 md:px-16 max-w-screen max-w-screen mt-[15vh] z-50  mx-auto">
   <div class="container mx-auto">
     <!-- Navigation Links -->
     <div class="container mx-auto mb-6">
@@ -175,7 +179,7 @@
         </nav>
     </div>
 
-    <h2 class="text-3xl font-bold text-center mb-2">New Courses</h2>
+    <h2 class="text-3xl font-bold md:mt-[6vh]  text-center mb-2">New Courses</h2>
     <p class="text-gray-600 text-center mb-6">Lorem ipsum dolor sit amet. Ea temporibus placeat ab officiis dolorem ut libero consequuntur sed fuga</p>
 
  <!-- Background Section -->
@@ -351,7 +355,7 @@ startAutoScroll(); // Start auto-scroll on load
         </button>
     </div>
 <!-- Upcoming Events Section -->
-<section class="py-8 bg-[#382364] w-full min-w-screen mt-[2vh] px-6 max-w-6xl mx-auto">
+<section class="py-8 bg-[#382364] w-full md:w-full lg:w-full xl:w-full min-w-screen mt-[2vh] px-6 max-w-6xl mx-auto">
   <h2 class="text-3xl font-bold text-white text-center mb-2">Upcoming Events</h2>
   <p class="text-gray-600 text-white text-center mb-6">Lorem ipsum dolor sit amet. Ea temporibus placeat ab officiis dolorem ut libero consequuntur sed fuga</p>
   
@@ -360,7 +364,7 @@ startAutoScroll(); // Start auto-scroll on load
     <!-- Slider Track -->
     <div id="sliderTrack" class=" flex transition-transform duration-300 ease-in-out">
       <!-- Event 1 -->
-      <div class=" px-2 scale-90 w-8/3  md:min-w-[50%] lg:min-w-[33.33%] p-2">
+      <div class=" px-2 scale-90 w-8/3  md:w-6/3 p-2">
         <div class="relative">
           <div class="bg-black h-40 rounded-t-lg relative">
             <div class="absolute top-0 right-0 bg-[#833d91] text-white p-2 rounded-bl-lg">
@@ -379,7 +383,7 @@ startAutoScroll(); // Start auto-scroll on load
       </div>
       
       <!-- Event 2 -->
-      <div class="px-2 scale-95 w-3/3 md:min-w-[50%] lg:min-w-[33.33%] p-2">
+      <div class="px-2 scale-95 w-3/3  md:w-6/3  p-2">
         <div class="relative">
           <div class="bg-black h-40 rounded-t-lg relative">
             <div class="absolute top-0 right-0 bg-[#833d91] text-white p-2 rounded-bl-lg">
@@ -399,7 +403,7 @@ startAutoScroll(); // Start auto-scroll on load
       </div>
             
       <!-- Event 3 -->
-      <div class="px-2 scale-90 w-8/3  md:min-w-[50%] lg:min-w-[33.33%] p-2">
+      <div class="px-2 scale-90 w-8/3  md:w-6/3  p-2">
         <div class="relative">
           <div class="bg-black h-40 rounded-t-lg relative">
             <div class="absolute top-0 right-0 bg-[#833d91] text-white p-2 rounded-bl-lg">
