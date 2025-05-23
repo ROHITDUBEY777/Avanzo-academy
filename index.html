@@ -123,13 +123,13 @@
     </div>
 
     <!-- Center & Right Section: Nav Links & CTA -->
-    <nav class="hidden md:hidden lg:flex xl:text-xl  items-center justify-evenly text-sm font-[Poppins]  w-full max-w-[70%]">
+    <nav class="hidden md:hidden lg:flex xl:text-xl z-50 items-center justify-between  text-sm font-[Poppins]  w-full max-w-[70%]">
       <a href="index.html" class="text-gray-800 hover:text-[#9f6496]">Home</a>
       <a href="courses.html" class="text-gray-800 hover:text-[#9f6496]">Courses</a>
-      <a href="Announcement.html" class="text-gray-800 hover:text-[#9f6496]">Announcement</a>
-      <a href="https://lms.avanzoacademy.in" class="text-gray-800 hover:text-[#9f6496]">Virtual Center</a>
-      <a href="industry.html" class="text-gray-800 hover:text-[#9f6496]">Industry</a>
-      <button onclick="scrolltocontact()" class="text-gray-800 hover:text-[#9f6496] cursor-pointer">Contact</button>
+      <a href="Announcement.html" class="text-gray-800  ">Announcement</a>
+      <a href="https://lms.avanzoacademy.in" class="text-gray-800 ">Virtual Center</a>
+      <a href="industry.html" class="text-gray-800 ">Industry</a>
+      <button onclick="scrolltocontact()" class="text-gray-800  cursor-pointer">Contact</button>
         <button class="z-20 bg-[#d191af] px-6 py-2 text-white rounded-full opacity-70 cursor-pointer hover:bg-[#d191af] hover:opacity-100 transition focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50"
         onclick="window.location.href='https://lms.avanzoacademy.in';">
         Sign in
@@ -151,7 +151,7 @@
     </style>
 
     <!-- Hamburger Icon for Mobile -->
-    <button id="menuToggle" class=" lg:hidden scale-125 cursor-pointer text-gray-800 focus:outline-none px-2">
+    <button id="menuToggle" class=" lg:hidden z-50 scale-125 cursor-pointer text-gray-800 focus:outline-none px-2">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -192,12 +192,14 @@
         }
          closeBtn.addEventListener('click', closeMenu);
         overlay.addEventListener('click', closeMenu);
-        function scrolltocontact(){
+     
+          function scrolltocontact(){
   const contactsection = document.getElementById('contactoptions');
   contactsection.scrollIntoView({behaviour:'smooth'});
 
     mobileMenu.classList.add('-translate-x-full');
 }
+
         </script>
       <!-- Mobile Nav Links -->
       <a href="index.html" class="hover:text-[#9f6496]">Home</a>
@@ -212,10 +214,16 @@
       </button>
     </div>
   </div>
-</header>
+     <!-- Overlay -->
+        <div id="overlay" class="fixed inset-0 bg-black opacity-50  hidden md:hidden"></div>
+
+        <!-- Purple Background -->
+        <div class="absolute right-0 top-0 left-1/2 w-1/2 h-full w-screen bg-primary" style="background-image: url('/assets/images/background.jpg'); background-size: cover;"></div>
+    </header>
+
 
 <!-- Hero Section -->
-    <main class="relative flex-1 grid mt-[15vh] w-full min-w-full justify-center   md:mt-[15vh] md:grid-cols-2 gap-8 md:gap-12 px-4 md:px-16 py-8 md:py-12">
+    <main class="relative flex-1 grid   w-full min-w-full justify-center lg:mt-[9vh] xl:mt-[4vh] mt-[14vh] md:mt-[11vh] md:grid-cols-2 gap-8 md:gap-12 px-4 md:px-16 py-8 md:py-12">
         <!-- <--Left Content -->
         <div class="z-20 flex flex-col justify-center text-center md:text-left">
             <h1 class="text-3xl md:text-5xl font-normal leading-normal mb-8 md:mb-12">
